@@ -1,10 +1,6 @@
 "use strict";
 
 class Kev {
-  constructor( options ) {
-    console.log( 'kev constructor', options );
-    this.age = options.age;
-  }
 
   execute() {
     return new Promise( ( resolve, reject ) => {
@@ -64,25 +60,27 @@ kevin.execute()
 // to test...
 // note the run asynchronously so results come back jumbled
 
-console.log('--------');
 
-var kevin = new Kev( {
-  age: 33
-} );
 
-kevin.start()
-.then( function( result ) {
-  console.log( 'start result', result );
-} );
+// console.log('--------');
 
-console.log('--------');
+// var kevin = new Kev( {
+//   age: 33
+// } );
 
-var kevin = new Kev( {
-  age: 33
-} );
+// kevin.start()
+// .then( function( result ) {
+//   console.log( 'start result', result );
+// } );
 
-kevin.middle()
-.then( function( result ) {
-  console.log( 'middle result', result );
-} );
+// console.log('--------');
+
+// var kevin = new Kev( {
+//   age: 33
+// } );
+
+// kevin.middle()
+// .then( function( result ) {
+//   console.log( 'middle result', result );
+// } );
 
