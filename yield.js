@@ -17,12 +17,12 @@ yielder._add2 = function( aNumber ) {
         var result = aNumber + 2;
         deferred.resolve( result );
     }, 2000 );
-
     return deferred.promise;
 };
 
 // chain all the things
-yielder.run = Q.async( function*() {
+yielder.run = Q.async( function*( foo ) {
+    console.log( 'f00', foo );
     var state = {};
     console.log( '1', state );
     state.initalNumber = yield this._generateNumber();
@@ -30,4 +30,4 @@ yielder.run = Q.async( function*() {
     state.afterAdding2 = yield this._add2( state.initalNumber );
     console.log( '5', state );
     return Q.resolve( state );
-} )
+} );
