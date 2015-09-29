@@ -2,7 +2,7 @@ var yielder = module.exports = {};
 
 var Q = require( 'q' );
 
-// static function
+// simples
 yielder._generateNumber = function() {
     var x = 1;
     console.log( '2' );
