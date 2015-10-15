@@ -1,5 +1,5 @@
 
-// implicit example
+// implicit args example
 
 var data = {
 	request: request
@@ -32,7 +32,7 @@ function c( data ) {
 
 
 
-// explicit example
+// explicit args example
 
 var data = {
 	request: 'request'
