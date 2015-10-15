@@ -39,6 +39,8 @@ var data = {
 	request: 'request'
 };
 
+// each function call in the promise chain is itself wrapped in a promise which before the call
+// passes it it's args and afterwards consolidates it's response back to the scope
 var aData = _.pick( data, 'request' );
 return a( aData ).then( function( aResult ) {
 	data.aResult = aResult;
