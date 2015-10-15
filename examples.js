@@ -10,6 +10,7 @@ return a( data )
 .then( c )
 
 function a( data ) {
+	// a() can access ANYTHING on `data` thus has the ability to break the solution while still passing the tests
 	console.log( data.request ); // 'request'
 	data.aResult = 'aAnswer';
 	return data;
@@ -59,6 +60,7 @@ return a( aData ).then( function( aResult ) {
 } );
 
 function a( data ) {
+	// a() can only access what it is passed in it's args
 	console.log( data.request ); // 'request'
 	return 'aAnswer';
 }
