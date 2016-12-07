@@ -46,7 +46,8 @@ yielder._add2 = function( aNumber ) {
   } );
 };
 
-// chain all the things
+// chain all the things, trying to keep mutations to the "state" together
+// called functions perform our logic only knowing what they need to
 yielder.run = Q.async( function*( arguments ) {
   console.log( 'run: initial arguments', arguments );
   // setup a state object for this "flow"

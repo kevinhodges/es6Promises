@@ -1,6 +1,6 @@
 var yielder = require( './yield' );
 
-// we can pass stuff to the generator here
+// we can pass initial state/arguments here
 yielder.run( 'foo' )
 .then( function( result ) {
 	// this is what gets resolved from the yielder
